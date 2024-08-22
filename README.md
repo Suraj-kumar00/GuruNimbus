@@ -1,7 +1,7 @@
 # Building GuruNimbus
 
 ### Installation for local development:
-1. Download Minicode of your system.
+1. Download Miniconda of your system.
 ```bash
 npm i
 conda activate
