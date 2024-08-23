@@ -14,11 +14,26 @@ interface Message {
 
 export function Chat() {
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
+"Who is the best professor for introductory biology?",
+"Can you recommend a history professor who gives engaging lectures?",
+"I'm looking for a challenging physics course. Any suggestions?",
+"Which literature professor is known for analyzing modern works?",
+"Is there a psychology professor who focuses on cognitive research?",
+"Who teaches the most practical computer science courses?",
+"I need an economics professor who relates concepts to real-world scenarios.",
+"Are there any environmental science professors with field work opportunities?",
+"Which organic chemistry professor is best for pre-med students?",
+"Who offers the most balanced view in political science classes?",
+"Is there a calculus professor who explains concepts slowly and thoroughly?",
+"Which art history professor covers the widest range of periods?",
+"I'm struggling with biochemistry. Who's the most helpful professor?",
+"Which sociology professor discusses current social issues?",
+"Who makes statistics interesting and applicable to daily life?",
+"Is there a marketing professor with real industry experience?",
+"Which astronomy professor incorporates the latest space discoveries in their lectures?",
+"Who's the most thought-provoking philosophy professor?",
+"I'm interested in neuroscience research. Which professor should I approach?",
+"Who's the best professor for understanding global politics and diplomacy?",
   ];
 
   const [messages, setMessages] = useState<Message[]>([
