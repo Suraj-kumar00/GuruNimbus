@@ -124,7 +124,7 @@ export function Chat() {
   // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 bg-black ">
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 bg-black  ">
       <section className="text-zinc-700">
         <div className="flex h-screen justify-center items-center">
           <div className="mx-auto mt-3 w-full max-w-xl">
