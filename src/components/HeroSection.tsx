@@ -2,6 +2,7 @@
 import { useScroll, useTransform } from "framer-motion";
 import React from "react";
 import { Vortex } from "@/components/ui/vortex";
+import Link from "next/link";
 
 export function HeroSection() {
   const ref = React.useRef(null);
@@ -35,10 +36,10 @@ export function HeroSection() {
             Building GuruNimbus, an advanced AI-powered RAG chatbot that intelligently guides you in rating and discovering the best professors.
           </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-        <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+        <Link className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]" href={"/home"}        >
           Get Started
-        </button>
-        <button className="px-4 py-2  text-white ">Watch trailer</button>
+        </Link>
+        <button className="px-4 py-2  text-white ">How it Works</button>
       </div>
     </Vortex>
   </div>

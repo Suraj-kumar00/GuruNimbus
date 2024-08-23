@@ -1,7 +1,8 @@
 # Building GuruNimbus
 
+
 ### Installation for local development:
-1. Download **Miniconda** of your system.
+1. Download [**Miniconda**](https://docs.anaconda.com/miniconda/) of your system.
 ```bash
 # Install Next.js package dependencies
 npm install
@@ -30,9 +31,6 @@ pip install "pinecone-client[grpc]"
 ---
 ### Setting up .env secrets:
 ```bash
-# For this use OpenRouter API key
-OPENAI_API_KEY=
-
-PINECONE_API_KEY=
+# After coping add your API keys
+cp .env.example .env
 ```
----
