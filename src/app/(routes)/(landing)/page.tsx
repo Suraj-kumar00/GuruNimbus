@@ -1,9 +1,12 @@
-import Image from "next/image";
 
-export default function Home() {
+import React from 'react'
+import { HeroSection } from '@/components/HeroSection';
+
+type Props = {}
+
+export default function Home({}: Props) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>i am landing page</div>
-    </main>
-  );
+    <HeroSection/>
+  )
 }
+
