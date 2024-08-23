@@ -15,6 +15,9 @@ conda activate rag
 # Deactivate the current Conda environment
 conda deactivate
 
+# To install all package/dependencies in one signle commands:
+pip install -r requirements.txt
+
 # Install the python-dotenv package for managing environment variables
 pip install python-dotenv
 
