@@ -1,14 +1,16 @@
 import React from 'react'
+import { Navbar } from '@/components/Navbar'
 import { Chat } from './chat'
 import { Footer } from '@/components/Footer'
-import { Navbar } from '@/components/Navbar'
 
 type Props = {}
 
-export default function Home({}: Props) {
+export default function Home({ }: Props) {
   return (
-    <><><Chat />
+    <><> <Navbar /></>
+      <Chat />
       <Footer /></>
-      <Navbar /></>
+
+
   )
 }

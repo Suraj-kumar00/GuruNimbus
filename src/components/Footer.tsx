@@ -20,7 +20,7 @@ export function Footer() {
             <Link href="/about" className="text-gray-400 hover:text-white text-xs md:text-sm"> {/* Reduced font size */}
               About Us
             </Link>
-            <Link href="/professors" className="text-gray-400 hover:text-white text-xs md:text-sm"> {/* Reduced font size */}
+            <Link href="/professor" className="text-gray-400 hover:text-white text-xs md:text-sm"> {/* Reduced font size */}
               Professors
             </Link>
             <Link href="/blog" className="text-gray-400 hover:text-white text-xs md:text-sm"> {/* Reduced font size */}
