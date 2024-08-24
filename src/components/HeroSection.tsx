@@ -2,6 +2,7 @@
 import { useScroll, useTransform } from "framer-motion";
 import React from "react";
 import { Vortex } from "@/components/ui/vortex";
+import {  FaPlayCircle } from "react-icons/fa";
 import Link from "next/link";
 
 export function HeroSection() {
@@ -29,17 +30,21 @@ export function HeroSection() {
       <h2 className="md:text-4xl text-4xl lg:text-8xl font-bold text-center text-white relative z-20">
         GuruNimbus
         </h2>
-      {/* <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-        An advanced AI-powered RAG chatbot that intelligently guides you in rating and discovering the best professors.
-      </p> */}
-      <p className="text-neutral-200 max-w-lg mx-auto my-4 text-md text-center">
+      
+      <p className="text-neutral-200 max-w-lg mx-auto my-4 text-sm text-center ">
             Building GuruNimbus, an advanced AI-powered RAG chatbot that intelligently guides you in rating and discovering the best professors.
           </p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
         <Link className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]" href={"/home"}        >
           Get Started
         </Link>
-        <button className="px-4 py-2  text-white ">How it Works</button>
+        {/* <button className="px-4 py-2  text-white ">
+            How it Works
+          </button> */}
+          <button className="px-4 py-2 text-white flex items-center text-xl" >
+            < FaPlayCircle className="mr-2" /> {/* Play icon added here */}
+            How it Works
+          </button>
       </div>
     </Vortex>
   </div>
