@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import scraper from '@/utils/scraper'
 import { isValidUrl } from '@/utils/urlFilter'
-import { openai, createEmbeddings } from '@/utils/embeddings'
+import { createEmbeddings } from '@/utils/embeddings'
 import { pc, ensurePineconeIndex, insertDataIntoPinecone } from '@/utils/pineconeClient'
 
 
