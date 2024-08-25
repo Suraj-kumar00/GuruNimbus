@@ -82,4 +82,3 @@ const Result: React.FC<ProfessorRatingProps> = ({ scrapeData }) => {
   );
 };
 
-export default Result;
