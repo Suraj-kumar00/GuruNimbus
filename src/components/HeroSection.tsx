@@ -21,7 +21,7 @@ export function HeroSection() {
           </h2>
 
           <p className="text-gray-300 max-w-lg my-2 text-sm md:text-base">
-            Building GuruNimbus, an advanced AI-powered RAG chatbot that
+            Building Guru Nimbus, an advanced AI-powered RAG chatbot that
             intelligently guides you in rating and discovering the best
             professors.
           </p>

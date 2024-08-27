@@ -66,16 +66,16 @@ export const FloatingNav = ({
           className
         )}
       >
-        <div className="flex flex-row items-center gap-3">
-              <img
-                src="/gurunimbus.png"
-                alt="GuruNimbus Logo"
-                className="h-8 w-8"
-              />
-              <h1 className="text-lg text-white">
-                Guru Nimbus
-              </h1>
-        </div>
+         <Link href="/" passHref>
+      <div className="flex flex-row items-center gap-3 cursor-pointer">
+        <img
+          src="/gurunimbus.png"
+          alt="GuruNimbus Logo"
+          className="h-8 w-8"
+        />
+        <h1 className="text-lg text-white">Guru Nimbus</h1>
+      </div>
+    </Link>
        <div  className="flex flex-row justify-center items-center space-x-8">
        {navItems.map((navItem: any, idx: number) => (
           <Link
