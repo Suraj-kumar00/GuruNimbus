@@ -17,6 +17,7 @@ export const AnimatedTooltip = ({
     name: string;
     designation: string;
     image: string;
+    link: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
