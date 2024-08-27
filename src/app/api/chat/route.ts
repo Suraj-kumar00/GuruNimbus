@@ -1,13 +1,14 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { OpenAI } from "openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Defining systemPrompt
 const systemPrompt = `
-
 You are Guru Nimbus, 
 Your intelligent assistant powered by Retrieval-Augmented Generation (RAG). Please provide your query, and GuruNimbus will generate the optimal result based on its extensive knowledge base.
+
+Just generate the top 3 response of the below format, don't add any extra information.
 
 **Format of the Response for every single professor that user asks:**
 
@@ -20,14 +21,13 @@ Your intelligent assistant powered by Retrieval-Augmented Generation (RAG). Plea
 **Star:** ⭐(this is a sample star, render the stars of every professor have.)  
 *This field shows a star rating for the quality or relevance of the information provided.*
 
-
 Feel free to ask your question, and GuruNimbus will provide a comprehensive and insightful response!
 
 Be polite, clear, and concise in your responses.
 Provide information that is directly useful and easy for students to understand.
-`
-;
-export async function POST(req: { json: () => any; }) {
+`;
+
+export async function POST(req: NextRequest) {
   const data = await req.json();
   const pc = new Pinecone({
     apiKey: process.env.PINECONE_API_KEY || '',
@@ -49,7 +49,7 @@ export async function POST(req: { json: () => any; }) {
     vector: embeddings['values'],
     includeMetadata: true,
   });
-  
+
   let resultString = "\n\nReturned results from vector db {done automatically}";
   results.matches.forEach((match) => {
     resultString += `\n
@@ -57,8 +57,7 @@ export async function POST(req: { json: () => any; }) {
         Review: ${match.metadata?.review}
         Subject: ${match.metadata?.subject}
         Stars: ${match.metadata?.stars}
-        \n\n`
-        ;
+        \n\n`;
   });
 
   const lastMessage = data[data.length - 1];
@@ -94,7 +93,5 @@ export async function POST(req: { json: () => any; }) {
     },
   });
 
-
   return new NextResponse(stream);
 }
-
