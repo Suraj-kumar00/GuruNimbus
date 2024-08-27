@@ -26,9 +26,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-end md:w-1/3 space-y-4">
             <div className="flex space-x-4">
             
-              <a href="https://x.com/mohitjoping" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-                <FaTwitter className="h-6 w-6" />
-              </a>
+           
               <a href="mailto:hellomohit21@gmail.com" className="hover:text-blue-500">
                 <FaEnvelope className="h-6 w-6" />
               </a>
