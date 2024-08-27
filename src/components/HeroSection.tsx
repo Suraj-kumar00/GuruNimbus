@@ -4,18 +4,15 @@ import React from "react";
 import Link from "next/link";
 import { BackgroundBeamsWithCollision } from "./ui/background-beam";
 import BubbleEffect from "./ui/bubble";
-import { FaPlayCircle } from "react-icons/fa";
 import { Bttn } from "@/app/(routes)/(landing)/how-it-works";
 
 export function HeroSection() {
   const [showBubbles, setShowBubbles] = useState(false);
 
   return (
-    <div className="w-full h-screen bg-black flex items-center justify-center">
+    <div className="w-full h-screen bg-black flex items-center justify-center ">
       <BackgroundBeamsWithCollision>
-       
         <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col justify-center items-center text-center px-4 md:px-8">
-          <div className="flex flex-col justify-center items-center">
           <h2
             className="text-4xl md:text-5xl lg:text-8xl font-bold text-transparent bg-gradient-to-r from-[#006dff]/10 to-[#006dff] bg-clip-text drop-shadow-lg rounded-lg"
             style={{ WebkitTextStroke: "1px #006dff" }}
@@ -23,14 +20,13 @@ export function HeroSection() {
             GuruNimbus
           </h2>
 
-          <p className="text-gray-300 max-w-lg  text-sm md:text-base">
+          <p className="text-gray-300 max-w-lg my-2 text-sm md:text-base">
             Building GuruNimbus, an advanced AI-powered RAG chatbot that
             intelligently guides you in rating and discovering the best
             professors.
           </p>
 
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+          <div className="flex flex-col sm:flex-row items-center gap-6 mt-16 h-10 ">
             <Link href={"/chat"}>
               <button
                 onMouseEnter={() => setShowBubbles(true)}

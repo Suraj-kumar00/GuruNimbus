@@ -68,7 +68,7 @@ export function Chat() {
     setMessages(updatedMessages);
 
     try {
-      const response = await fetch("/api/route", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

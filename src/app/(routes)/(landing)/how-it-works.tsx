@@ -10,9 +10,9 @@ import { FaPlayCircle } from "react-icons/fa";
 
 export function Bttn() {
   return (
-    <div className="py-40  flex items-center justify-center">
+    <div className="py-6  flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="relative px-4 py-2 backdrop-blur-sm bg-gradient-to-r  from-blue-500/70 to-blue-400/50 text-white text-center rounded-full flex flex-row justify-center items-center gap-2 group/modal-btn">
+        <ModalTrigger className="relative min-h-12 px-4 py-2 backdrop-blur-sm bg-gradient-to-r  from-blue-500/70 to-blue-400/50 text-white text-center rounded-full flex flex-row justify-center items-center gap-2 group/modal-btn">
           <span className="flex flex-row gap-2">
             <FaPlayCircle className="h-6 w-6 text-white/80" /> How it works{" "}
           </span>
