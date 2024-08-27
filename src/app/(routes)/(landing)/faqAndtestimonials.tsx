@@ -1,5 +1,5 @@
 import React from "react";
-import Ribon from "./ribon1";
+
 import { People } from "../../../components/ui/people";
 import FAQ from "@/components/ui/faq";
 

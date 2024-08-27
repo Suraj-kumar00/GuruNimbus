@@ -1,0 +1,126 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Parker",
+        "subject": "Molecular Biology",
+        "review": "Complex biological concepts made accessible and interesting.",
+        "star": 4
+        
+
+      },
+      {
+        "professor": "Prof. John Smith",
+        "subject": "World History",
+        "review": "Covers a broad range of historical events, but lacks depth.",
+        "star": 3
+      },
+      {
+        "professor": "Dr. Maria Rodriguez",
+        "subject": "Quantum Physics",
+        "review": "Mind-bending theories explained with clarity and enthusiasm.",
+        "star": 5
+      },
+      {
+        "professor": "Prof. David Lee",
+        "subject": "Literature",
+        "review": "Insightful analysis of classic and contemporary works.",
+        "star": 4
+      },
+      {
+        "professor": "Dr. Sarah Johnson",
+        "subject": "Psychology",
+        "review": "Fascinating exploration of human behavior and cognition.",
+        "star": 5
+      },
+      {
+        "professor": "Prof. Michael Brown",
+        "subject": "Computer Science",
+        "review": "Programming concepts not explained clearly enough.",
+        "star": 2
+      },
+      {
+        "professor": "Dr. Laura White",
+        "subject": "Economics",
+        "review": "Makes macroeconomic principles relevant to everyday life.",
+        "star": 4
+      },
+      {
+        "professor": "Prof. Robert Green",
+        "subject": "Environmental Science",
+        "review": "Important topics covered, but lectures lack engagement.",
+        "star": 3
+      },
+      {
+        "professor": "Dr. Lisa Chen",
+        "subject": "Organic Chemistry",
+        "review": "Difficult subject made manageable through clear explanations.",
+        "star": 5
+      },
+      {
+        "professor": "Prof. James Wilson",
+        "subject": "Political Science",
+        "review": "Thought-provoking discussions on current political systems.",
+        "star": 4
+      },
+      {
+        "professor": "Dr. Thomas Anderson",
+        "subject": "Calculus",
+        "review": "Advanced mathematical concepts rushed through too quickly.",
+        "star": 2
+      },
+      {
+        "professor": "Prof. Anna Kim",
+        "subject": "Art History",
+        "review": "Brings historical artworks and their contexts to life.",
+        "star": 5
+      },
+      {
+        "professor": "Dr. Kevin Patel",
+        "subject": "Biochemistry",
+        "review": "Solid content but struggles to simplify complex reactions.",
+        "star": 3
+      },
+      {
+        "professor": "Prof. Rachel Turner",
+        "subject": "Sociology",
+        "review": "Eye-opening perspectives on social structures and interactions.",
+        "star": 4
+      },
+      {
+        "professor": "Dr. Daniel Martinez",
+        "subject": "Statistics",
+        "review": "Transforms dry numbers into meaningful insights.",
+        "star": 5
+      },
+      {
+        "professor": "Prof. Olivia Taylor",
+        "subject": "Marketing",
+        "review": "Good real-world examples, but lacks theoretical depth.",
+        "star": 3
+      },
+      {
+        "professor": "Dr. Christopher Lee",
+        "subject": "Astronomy",
+        "review": "Captivating journey through the cosmos and its phenomena.",
+        "star": 4
+      },
+      {
+        "professor": "Prof. Elizabeth Wright",
+        "subject": "Philosophy",
+        "review": "Challenges students to question fundamental assumptions.",
+        "star": 5
+      },
+      {
+        "professor": "Dr. Steven Harris",
+        "subject": "Neuroscience",
+        "review": "Fascinating subject matter, but poorly communicated.",
+        "star": 2
+      },
+      {
+        "professor": "Prof. Melissa Chang",
+        "subject": "International Relations",
+        "review": "Insightful analysis of global political dynamics.",
+        "star": 4
+      }
+    ]
+  }
