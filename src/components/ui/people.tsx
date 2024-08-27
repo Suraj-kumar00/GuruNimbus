@@ -10,6 +10,14 @@ const people = [
     image:
       "/img.png",
   },
+
+  {
+    id: 2,
+    name: "Suraj Kumar",
+    designation: "DevOps Engineer",
+    image:
+      "/suraj.jpeg",
+  },
     {
     id: 3,
     name: "Kumari Anjali",
@@ -18,13 +26,6 @@ const people = [
       "/anjali.jpeg",
   },
 
-  {
-    id: 2,
-    name: "Suraj Kumar",
-    designation: "devops Engineer",
-    image:
-      "/suraj.jpeg",
-  },
 
 
 ];
