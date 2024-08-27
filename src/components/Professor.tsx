@@ -4,9 +4,11 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { FaSearch, FaStar } from 'react-icons/fa';
 import { HoverEffect } from '../components/ui/card-hover-effect';
+import { Navbar } from './Navbar';
 
 interface Professor {
   professor: string;
+  title:string;
   subject: string;
   review: string;
   star: number;
@@ -49,30 +51,29 @@ export function Professor() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center pt-10">
+    <><Navbar /><div className="min-h-screen bg-black flex flex-col items-center pt-10">
       {/* Search Bar */}
       <div className="w-full flex justify-center mb-8 ">
         <div className="relative">
           <input
             type="text"
-            placeholder="Search Professors"
-            className="rounded-full p-3 text-white w-80 shadow-lg bg-slate-700 border-2 border-blue-500 shadow-xl "  // searchbar color 
+            placeholder="Search Professors..."
+            className="rounded-full min-w-[40vw] pl-14 p-3 my-10 mt-16 text-white/80 w-80 shadow-lg  border-[1px] border-blue-500 bg-transparent focus:outline-none" // searchbar color 
             value={searchQuery}
-            onChange={handleSearchChange}
-          />
-          <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-slate-700 rounded-full shadow-lg">
-            <FaSearch className="w-4 h-4 text-slate-100" />
+            onChange={handleSearchChange} />
+          <button className="absolute left-3 top-[11vh] transform -translate-y-1/2 p-2 bg-transparent rounded-full shadow-lg">
+            <FaSearch className="w-6 h-6 text-blue-500/80 text-sm" />
           </button>
         </div>
       </div>
 
       {/* Professors Grid with HoverEffect */}
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-8 ">
         <HoverEffect
           items={filteredProfessors.map(prof => ({
             title: ` ${prof.professor}`,
             description: (
-              <div className="text-white">
+              <div className="">
                 <p>Subject: {prof.subject}</p>
                 <p>Review: {prof.review}</p>
                 <div className="flex items-center mt-2">
@@ -87,11 +88,10 @@ export function Professor() {
               </div>
             ),
             link: 'https://via.placeholder.com/150', // Placeholder image, replace with actual link if available
-            img: 'https://via.placeholder.com/150',  // Placeholder image, replace with actual image if available
-          }))}
-        />
+            img: 'https://via.placeholder.com/150', // Placeholder image, replace with actual image if available
+          }))} />
       </div>
-    </div>
+    </div></>
   );
 }
 
