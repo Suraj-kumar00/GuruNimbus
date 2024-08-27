@@ -8,6 +8,8 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { UserButton, useUser } from '@clerk/nextjs';
+
 
 export const FloatingNav = ({
   navItems,
@@ -20,22 +22,26 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const { isSignedIn } = useUser();
   const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true); // Start as visible
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const previous = scrollYProgress.getPrevious();
 
       if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
+        setVisible(true); // Always show when at the top
       } else {
+        // Show or hide based on scroll direction
+        let direction = current - (previous || 0);
+
         if (direction < 0) {
-          setVisible(true);
+          setVisible(true); // Scrolling down
         } else {
-          setVisible(false);
+          setVisible(false); // Scrolling up
         }
       }
     }
@@ -56,26 +62,61 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-white/[0.4] dark:border-white/[0.2] rounded-full dark:bg-slate-300 bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "flex justify-center max-w-fit fixed top-10 inset-x-0 mx-auto bg-transparent  z-[5000] pr-2 px-2 py-2  space-x-96",
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        <div className="flex flex-row items-center gap-3">
+              <img
+                src="/gurunimbus.png"
+                alt="GuruNimbus Logo"
+                className="h-8 w-8"
+              />
+              <h1 className="text-lg text-white">
+                Guru Nimbus
+              </h1>
+        </div>
+       <div  className="flex flex-row justify-center items-center space-x-8">
+       {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-white dark:hover:text-neutral-300 hover:text-neutral-300"
+              "relative dark:text-neutral-50  flex space-x-1 text-white dark:hover:text-neutral-300 hover:text-neutral-300"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
-          <span>Logout</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
+       </div>
+  
+    <div className="flex gap-3">
+    {isSignedIn ? (
+            <>
+              
+              <UserButton 
+              appearance={{
+                elements: {
+                  userButtonAvatarBox: {
+                  width: '2.5rem',
+                  height: '2.5rem',
+                  },
+                },
+              }}
+              />
+       
+            </>
+          ): ( <><Link href="/sign-in">
+              <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
+                <span>sign-in</span>
+                <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+              </button></Link><Link href="/sign-up">
+                <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
+                  <span>sign-up</span>
+                  <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+                </button></Link></>)}
+    </div>
       </motion.div>
     </AnimatePresence>
   );
