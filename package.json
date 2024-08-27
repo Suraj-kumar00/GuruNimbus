@@ -15,6 +15,7 @@
     "@google/generative-ai": "^0.17.1",
     "@huggingface/inference": "^2.8.0",
     "@huggingface/transformers": "^3.0.0-alpha.9",
+    "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "@pinecone-database/pinecone": "^3.0.1",
     "@radix-ui/react-avatar": "^1.1.0",
@@ -23,9 +24,10 @@
     "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.29",
+    "framer-motion": "^11.3.30",
     "gemini-api": "^2.0.4",
     "lucide-react": "^0.429.0",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.6",
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
@@ -33,9 +35,9 @@
     "overlayscrollbars-react": "^0.5.6",
     "pinecone-client": "^2.0.0",
     "puppeteer": "^23.1.1",
-    "react": "^18",
+    "react": "^18.3.1",
     "react-circular-progressbar": "^2.1.0",
-    "react-dom": "^18",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.2",
@@ -43,12 +45,12 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.5.4"
   }
 }
