@@ -6,6 +6,7 @@ import { FloatingNav } from "../components/ui/floating-navbar";
 import { FaHome, FaComments, FaGithub, FaBlog } from "react-icons/fa"; // Import Font Awesome icons
 import Link from "next/link";
 import { link } from "fs";
+import { User, UserRoundSearch } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,12 +27,22 @@ export function Navbar() {
       link: "https://github.com/Suraj-kumar00/GuruNimbus",
       icon: <FaGithub className="h-4 w-4 text-white dark:text-white" />,
     },
-
+    {
+      name: "Professor's",
+      link: "/professor",
+      icon: <User />,
+    },
+    {
+      name: "Web scrape",
+      link: "/scrape",
+      icon: <UserRoundSearch />,
+    },
+    
   ];
 
   return (
-    <div className=" w-full bg-black flex">
-        <div className='hidden md:flex bg-transparent flex-row gap-4'>
+    <div className=" w-[90vw] bg-black flex">
+        <div className='hidden md:flex bg-transparent flex-row'>
       <FloatingNav navItems={navItems} />
       </div>
       <div className='md:hidden bg-transparent'>
