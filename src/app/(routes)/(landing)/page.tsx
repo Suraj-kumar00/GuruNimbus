@@ -1,12 +1,29 @@
 
 import React from 'react'
 import { HeroSection } from '@/components/HeroSection';
+import { Navbar } from '@/components/Navbar';
+import FAQ from './faqAndtestimonials';
+import { Footer } from '@/components/Footer';
+
 
 type Props = {}
 
-export default function Home({}: Props) {
+export default function Landing({}: Props) {
   return (
-    <HeroSection/>
+
+    <>
+ 
+      <Navbar />
+      
+      <HeroSection />
+     
+      <FAQ />
+
+      <Footer />
+     
+
+    </>
+
   )
 }
 
