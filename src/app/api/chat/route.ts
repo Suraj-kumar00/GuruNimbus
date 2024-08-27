@@ -1,10 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { OpenAI } from "openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Defining systemPrompt
 const systemPrompt = `
+
 You are Guru Nimbus, 
 Welcome to **GuruNimbus**, your intelligent assistant powered by Retrieval-Augmented Generation (RAG). Please provide your query, and GuruNimbus will generate the optimal result based on its extensive knowledge base.
 
@@ -29,8 +30,7 @@ Be polite, clear, and concise in your responses.
 Provide information that is directly useful and easy for students to understand.
 `
 ;
-
-export async function POST(req: NextRequest) {
+export async function POST(req: { json: () => any; }) {
   const data = await req.json();
   const pc = new Pinecone({
     apiKey: process.env.PINECONE_API_KEY || '',
@@ -97,5 +97,7 @@ export async function POST(req: NextRequest) {
     },
   });
 
+
   return new NextResponse(stream);
 }
+

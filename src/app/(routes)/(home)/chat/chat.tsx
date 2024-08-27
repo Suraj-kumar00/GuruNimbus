@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent, ChangeEvent } from "react";
 import { PlaceholdersAndVanishInput } from "@/components/ui/text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -68,7 +68,7 @@ export function Chat() {
     setMessages(updatedMessages);
 
     try {
-      const response = await fetch("/api/route", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -135,22 +135,23 @@ export function Chat() {
                 }`}
               >
               <Avatar className="p-1">
-  <AvatarImage
-    className="rounded-full"
-    src={m.role === "user" ? user?.imageUrl : m.avatar || ""}
-    alt={m.role}
-  />
-  <AvatarFallback
-    className={
-      m.role === "user"
-        ? "text-sm"
-        : "bg-blue-50 text-black"
-    }
-  >
-    {m.role === "user" ? "" : <img src="/gurunimbus.png" alt="Guru Nimbus" className="w-full h-full object-cover" />}
-  </AvatarFallback>
-</Avatar>
+              <AvatarImage
+               className="rounded-full"
+               src={m.role === "user" ? user?.imageUrl : m.avatar || ""}
+               alt={m.role}
+              />
+              <AvatarFallback
+                className={
+                m.role === "user"
+                ? "text-sm"
+                : "bg-blue-50 text-black"
+                }
+               >
+               {m.role === "user" ? "" : <img src="/gurunimbus.png" alt="Guru Nimbus" className="w-full h-full object-cover" />}
+              </AvatarFallback>
+              </Avatar>
 
+ 
                 <div className="mt-1.5 w-full">
                   <div className="flex">
                     <p className="font-semibold text-white/[1]">
