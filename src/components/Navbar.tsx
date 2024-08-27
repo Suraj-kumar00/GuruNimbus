@@ -28,7 +28,7 @@ export function Navbar() {
       icon: <FaGithub className="h-4 w-4 text-white dark:text-white" />,
     },
     {
-      name: "Professor's",
+      name: "Professors",
       link: "/professor",
       icon: <User />,
     },
