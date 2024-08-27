@@ -8,6 +8,7 @@ import { Navbar } from './Navbar';
 
 interface Professor {
   professor: string;
+  title:string;
   subject: string;
   review: string;
   star: number;
