@@ -1,9 +1,14 @@
-![GuruNimbus Banner]()
+![GuruNimbus Banner](./public/GuruNimbus-README-banner.png)
 
 **"GuruNimbus: RAG-Powered AI Assistant"** is a web app that uses Next.js, OpenAI, and Pinecone to deliver personalized professor and mentor insights. It goes beyond conventional rating systems by leveraging AI to offer detailed evaluations, helping students make informed decisions about their courses and instructors.
 
 ## Features
 
+1. **Rate My Professor Support Agent with RAG-Powered AI Capabilities**
+
+2. **Web Scraping Integration**
+
+3. **Advanced Search option to find Professors**
 
 
 ## Tech Stack
@@ -15,15 +20,15 @@
 - OpenAI
 
 ## For APIs
-- Openrouter
-- Gemini API
+- Openrouter API Key
+- Gemini API Key
 
 ## DevOps Practices
 - CI/CD with GitHub Actions
 - Dockerization 
 
 ## Project Workflow
-![GuruNimbus Project Workflow]()
+![GuruNimbus Project Workflow](./public/GuruNimbus-Project-Workflow.png)
 
 
 ### Installation for local development:
@@ -64,6 +69,11 @@ conda deactivate
 cp .env.example .env
 ```
 
+### Run the project:
+```bash
+npm run dev
+```
+
 ## Running the project using Docker
 First Install [**Docker Desktop**](https://www.docker.com/products/docker-desktop/)
 
@@ -75,10 +85,8 @@ docker pull surajkumar00/gurunimbus
 ```bash
 docker run -it -p 3000:3000 surajkumar00/gurunimbus
 ```
-On your browser check:
-```sh
-localhost:3000
-```
+On your browser check: [localhost:3000](localhost:3000)
+
 
 ## Welcome Contributros!
 Want to contribute? Great!
