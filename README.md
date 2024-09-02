@@ -1,5 +1,20 @@
 ![GuruNimbus Banner](./public/GuruNimbus-README-banner.png)
 
+
+<div align="center">
+  
+<br>
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Suraj-kumar00/GuruNimbus?logo=github"> </img>
+    <img alt="GitHub License" src="https://img.shields.io/github/license/Suraj-kumar00/GuruNimbus"></img>
+    <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/surajk_umar01"></img
+
+[![Build and push a project Image](https://github.com/Suraj-kumar00/GuruNimbus/actions/workflows/deploy-Image-to-GCR.yml/badge.svg?branch=main)](https://github.com/Suraj-kumar00/GuruNimbus/actions/workflows/deploy-Image-to-GCR.yml)
+[![CI Pipeline](https://github.com/Suraj-kumar00/GuruNimbus/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Suraj-kumar00/GuruNimbus/actions/workflows/ci.yml)
+
+</br>
+</div>
+<br>
+
 **"GuruNimbus: RAG-Powered AI Assistant"** is a web app that uses Next.js, OpenAI, and Pinecone to deliver personalized professor and mentor insights. It goes beyond conventional rating systems by leveraging AI to offer detailed evaluations, helping students make informed decisions about their courses and instructors.
 
 ## Features
